@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: none;
+    font-family: inherit;
+    
+}
+
+.first-section .navBar{
+    background: rgb(255, 255, 255);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    box-shadow: 3px 2px 10px;
+}
+.first-section .navBar .first-div{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.first-section .navBar .first-div .input-box {
+    
+    text-align: center;
+   
+}
+
+.first-section .navBar .logo{
+    margin-left: 10px;
+    cursor: pointer;
+}
+.first-section .navBar .first-div input{
+    background-color:rgba(236, 228, 228, 0.609);
+    height: 25px;
+    align-items: center;
+    justify-content: center;
+    padding:7px 10px 9px;
+    font-size: 18px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    display: inline-block;
+    text-transform: none;
+    line-height: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    cursor: text;
+    margin:0em;
+    border-image: initial;
+    appearance: auto;
+    width:100%
+  
+}
+.first-section .navBar .first-div .input-box{
+    margin:0 auto;
+    text-align: left;
+}
+
+.first-section .navBar .second-div{
+    margin-left:20px;
+    
+}
+.first-section .navBar .second-div a{
+    font-size: 25px;
+    padding:10px 40px;
+    color:rgb(141, 127, 127)
+    
+}
+.first-section .navBar .second-div a:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 5px;
+    
+}
+.first-section .navBar .third-div{
+    margin-left:80px;
+    
+}
+.first-section .navBar .third-div a{
+    font-size: 20px;
+    padding:10px 12px;
+    background-color:rgba(236, 228, 228, 0.829);
+    border-radius: 50%;
+    color:rgb(24, 9, 9)
+       
+}
+.first-section .navBar .third-div a:hover{
+    background-color:rgba(236, 223, 223, 0.986);
+    border-radius: 50%;
+       
+}
+.first-section .navBar .third-div .profile-rudra{
+    border-radius: 0;
+    background: none;
+}
+.first-section .navBar .third-div .profile-rudra:hover{
+    border-radius: 50px;
+    background-color:rgba(236, 228, 228, 0.609);
+
+}
