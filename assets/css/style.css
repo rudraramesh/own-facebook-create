@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: none;
     font-family: inherit;
+    list-style: none;
+    text-decoration: none;
+
     
 }
 
@@ -81,7 +84,8 @@
     padding:10px 12px;
     background-color:rgba(236, 228, 228, 0.829);
     border-radius: 50%;
-    color:rgb(24, 9, 9)
+    color:rgb(24, 9, 9);
+    
        
 }
 .first-section .navBar .third-div a:hover{
@@ -97,4 +101,251 @@
     border-radius: 50px;
     background-color:rgba(236, 228, 228, 0.609);
 
+}
+/* navbar section is end */
+
+/* section body start */
+.body-section .all-body{
+    background-color:rgba(245, 244, 244, 0.726);
+    display: flex;
+    
+}
+.body-section .all-body .all-links{
+    margin-left: 10px;
+    /* margin-top: 10px; */
+    /* background:red;  this is one */
+    width:20%;
+    overflow: hidden;
+    height: calc(100vh - 58px);
+    position: sticky;
+    top:50px;
+    cursor: pointer;
+   
+}
+.body-section .all-body .all-links:hover{
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.body-section .all-body .all-links::-webkit-scrollbar{
+    width:10px;
+}
+.body-section .all-body .all-links::-webkit-scrollbar-track{
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+}
+.body-section .all-body .all-links::-webkit-scrollbar-thumb{
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 10px;
+}
+
+
+.body-section .all-body .all-links .leicon{
+    margin-top:5px;
+    margin-left:5px;
+    padding: 5px 0px;
+    
+}
+.body-section .all-body .all-links .leicon:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 10px;
+    
+}
+.body-section .all-body .all-links .leicon a{
+    color:#050505;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+.body-section .all-body .all-links .leicon a i{
+    font-size: 20px;
+    border-radius: 50%;
+    color:#385898;
+    /* background:blue; */
+    padding:10px;
+}
+.body-section .all-body .all-links .horizental{
+   width:90%;
+   position: sticky;
+   margin: 10px 10px;
+   border-bottom:1px solid #ccc;
+}
+.body-section .all-body .all-links .shortcuts{
+    margin-top: 20px;
+    margin-left: 10px;
+    background: white; 
+    color:rgb(146, 156, 136);
+    font-size: 17px;
+    cursor: pointer;
+}
+.body-section .all-body .all-links .shortcuts a{
+    float: right;
+    margin-right:30px;
+    display: none;
+    color:rgb(65, 115, 221);
+    padding:5px;
+
+}
+.body-section .all-body .all-links .shortcuts a:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    padding:5px;
+}
+.body-section .all-body .all-links .shortcuts:hover a{
+    display: block;
+   
+}
+.body-section .all-body .all-links p{
+    margin-left: 5px;
+    font-size: 15px;
+}
+.body-section .all-body .all-links p a:hover{
+    text-decoration: underline;
+
+}
+/* post section */
+.body-section .all-body .post-section{
+    width: 60%;
+    height: auto;
+    /* background: black; this is one */
+    position: relative;
+}
+.body-section .all-body .post-section .story{
+    width:90%;
+    height:100%;
+    /* background:blue; this is one */
+    position: relative;
+    left:5%;
+    right: 5%;
+   
+    
+}
+.body-section .all-body .post-section .story .stories-post figure{
+padding:5px;
+/* box-shadow: 0 5px 5px rgb(0 1 1 / 90%); */
+}
+.body-section .all-body .post-section .story .stories-post figure .owner-user{
+height:140px;
+}
+.body-section .all-body .post-section .story .stories-post figure .borders {
+    position: relative;
+    bottom:30px;
+    left:35px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:blue;
+    color:#fff;
+    padding:8px;
+    border:3px solid #fff;
+    border-radius: 50%;
+    
+}
+.body-section .all-body .post-section .story .stories-post figure .borders  i{
+    /* align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:blue;
+    font-size: 20px; */
+    
+}
+.body-section .all-body .post-section .story .stories-post figure .captionss {
+    /* background:white; 
+    color:black;
+    position: relative;
+    bottom:30px;
+    height:45px;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+
+}
+
+.body-section .all-body .post-section .story .stories-post{
+    display: flex;
+    width:90%;
+    height: auto;
+     /* background:red;  this is one */
+    position:relative;
+    top:20px;
+    left:5%;
+    right:5%;
+    align-items: center;
+    justify-content: center;
+
+}
+.body-section .all-body .post-section .story .stories-post .create-stry{
+    /* box-shadow: 0 5px 5px rgb(0 1 1 / 90%); */
+    width: 107px;
+    height:190px;
+    border-radius: 10px;
+    cursor: pointer;
+box-shadow: 0 5px 5px rgb(0 1 1 / 90%);
+
+}
+.body-section .all-body .post-section .story .stories-post figure img{
+    width:107px;
+    height:190px;
+    position: relative;
+    box-shadow: 0 5px 5px rgb(0 1 1 / 90%);
+    transition: all .5s;
+    border-radius: 5px;
+
+
+}
+.body-section .all-body .post-section .story .stories-post figure img:hover{
+    transform: scale(1.01);  
+
+}
+.body-section .all-body .post-section .story .stories-post .user-storys{
+    height: 190px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.body-section .all-body .post-section .story .stories-post .user-storys .user-icon-img {
+    /* position: relative;
+    left:10px;
+    bottom: 170px;
+     background:black; 
+    padding:10px;
+    border-radius: 50%; */
+}
+.body-section .all-body .post-section .story .stories-post .user-storys .arrows-right{
+    
+}
+.body-section .all-body .post-section .story .stories-post .user-storys .user-icon-img img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 180px;
+    left:10px;
+    align-items: center;
+    border: 4px solid blue;
+    cursor: pointer;
+}
+
+.body-section .all-body .post-section .story .stories-post .user-storys .user-captionss{
+    position: relative;
+    bottom: 80px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+.body-section .all-body .post-section .story .stories-post .more-story{
+    width: 50px;
+    background:black;
+    position: relative;
+    margin-right: -50px;
+    bottom: 20px;
+    right:10px;
+}
+.body-section .all-body .post-section .story .stories-post .more-story i{
+    background: rgb(226, 226, 226);
+    padding:10px;
+     position: absolute;
+    /* right:20px;
+    top: 50%;  */
+    border-radius: 50%;
+    font-size: 15px;
+    font-weight: 700;
 }
