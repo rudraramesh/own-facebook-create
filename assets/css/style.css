@@ -8,6 +8,16 @@
 
     
 }
+::-webkit-scrollbar{
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 10px;
+}
 
 .first-section .navBar{
     background: rgb(255, 255, 255);
@@ -15,6 +25,10 @@
     text-align: center;
     align-items: center;
     box-shadow: 3px 2px 10px;
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    
 }
 .first-section .navBar .first-div{
     display: flex;
@@ -105,32 +119,33 @@
 /* navbar section is end */
 
 /* section body start */
+
 .body-section .all-body{
     background-color:rgba(245, 244, 244, 0.726);
     display: flex;
-    
+    width: 100%;
+    min-height:3200px; /*height is change */
+    max-height:auto;
 }
 .body-section .all-body .all-links{
-    margin-left: 10px;
-    /* margin-top: 10px; */
-    /* background:red;  this is one */
+    margin-left: 2px;
     width:20%;
     overflow: hidden;
     height: calc(100vh - 58px);
     position: sticky;
     top:50px;
+    margin-top:70px;
     cursor: pointer;
    
 }
 .body-section .all-body .all-links:hover{
-    overflow:scroll;
+    overflow-y:scroll;
     overflow-x: hidden;
 }
 .body-section .all-body .all-links::-webkit-scrollbar{
     width:10px;
 }
 .body-section .all-body .all-links::-webkit-scrollbar-track{
-    /* box-shadow: inset 0 0 5px grey;  */
     border-radius: 10px;
 }
 .body-section .all-body .all-links::-webkit-scrollbar-thumb{
@@ -159,7 +174,6 @@
     font-size: 20px;
     border-radius: 50%;
     color:#385898;
-    /* background:blue; */
     padding:10px;
 }
 .body-section .all-body .all-links .horizental{
@@ -171,7 +185,6 @@
 .body-section .all-body .all-links .shortcuts{
     margin-top: 20px;
     margin-left: 10px;
-    background: white; 
     color:rgb(146, 156, 136);
     font-size: 17px;
     cursor: pointer;
@@ -204,13 +217,16 @@
 .body-section .all-body .post-section{
     width: 60%;
     height: auto;
-    /* background: black; this is one */
     position: relative;
+    margin-top:4%;
+    left:0;
+    right:0;
+
 }
 .body-section .all-body .post-section .story{
     width:90%;
-    height:100%;
-    /* background:blue; this is one */
+    min-height:3200px;
+    max-height:auto;
     position: relative;
     left:5%;
     right: 5%;
@@ -219,7 +235,6 @@
 }
 .body-section .all-body .post-section .story .stories-post figure{
 padding:5px;
-/* box-shadow: 0 5px 5px rgb(0 1 1 / 90%); */
 }
 .body-section .all-body .post-section .story .stories-post figure .owner-user{
 height:140px;
@@ -239,21 +254,9 @@ height:140px;
     
 }
 .body-section .all-body .post-section .story .stories-post figure .borders  i{
-    /* align-items: center;
-    justify-content: center;
-    text-align: center;
-    color:blue;
-    font-size: 20px; */
     
 }
 .body-section .all-body .post-section .story .stories-post figure .captionss {
-    /* background:white; 
-    color:black;
-    position: relative;
-    bottom:30px;
-    height:45px;
-    align-items: center;
-    justify-content: center; */
     text-align: center;
 
 }
@@ -262,7 +265,6 @@ height:140px;
     display: flex;
     width:90%;
     height: auto;
-     /* background:red;  this is one */
     position:relative;
     top:20px;
     left:5%;
@@ -272,12 +274,11 @@ height:140px;
 
 }
 .body-section .all-body .post-section .story .stories-post .create-stry{
-    /* box-shadow: 0 5px 5px rgb(0 1 1 / 90%); */
     width: 107px;
-    height:190px;
+    height:auto;
     border-radius: 10px;
     cursor: pointer;
-box-shadow: 0 5px 5px rgb(0 1 1 / 90%);
+    box-shadow: 0 5px 5px rgb(0 1 1 / 90%);
 
 }
 .body-section .all-body .post-section .story .stories-post figure img{
@@ -301,12 +302,6 @@ box-shadow: 0 5px 5px rgb(0 1 1 / 90%);
 }
 
 .body-section .all-body .post-section .story .stories-post .user-storys .user-icon-img {
-    /* position: relative;
-    left:10px;
-    bottom: 170px;
-     background:black; 
-    padding:10px;
-    border-radius: 50%; */
 }
 .body-section .all-body .post-section .story .stories-post .user-storys .arrows-right{
     
@@ -343,9 +338,783 @@ box-shadow: 0 5px 5px rgb(0 1 1 / 90%);
     background: rgb(226, 226, 226);
     padding:10px;
      position: absolute;
-    /* right:20px;
-    top: 50%;  */
     border-radius: 50%;
     font-size: 15px;
     font-weight: 700;
+}
+
+/* create post section start */
+
+.body-section .all-body .post-section .story  .write-post{
+    width: 90%;
+    height: auto;
+    position: relative; 
+    margin-top:40px;
+    left:5%
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child{
+  width: 80%;
+  height:130px;
+  position: relative;
+  left:10%;
+  right: 10%;
+  top:1%;
+  border:1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgb(0 0.2 0.2 / 50%);
+
+
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .write-post-childss{
+    width:100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .write-post-childss img{
+    width:50px;
+    height:50px;
+    margin-left: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .write-post-childss span{
+    background-color:#f5f0f0;
+    color: #65676b;
+    width:78%;
+    margin-left: 10px;
+    font-size: 20px;
+    padding:8px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    user-select: none;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .write-post-childss span:hover{
+    background-color:rgba(236, 228, 228, 0.746);
+
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .hrs{
+   width:94%;
+   margin-left: 2%;
+   margin-right: 5%;
+   margin-top:10px;
+   background-color: gray;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top:5px;
+    
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option a{
+   
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    left:15px;
+    color:black;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option a:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 10px;
+
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option a i{
+    font-size: 20px;
+    padding:5px;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option .fa-video{
+    color:#f3425f;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option .fa-photo-video{
+    color:#45bd62;
+}
+.body-section .all-body .post-section .story  .write-post .write-post-child .post-option .fa-smile-wink{
+    color:#F5C33B;
+}
+
+
+/* create room */
+.body-section .all-body .post-section .story  .write-post .create-room{
+    width:80%;
+    height: 80px;
+    position: relative;
+    left:10%;
+    right: 10%;
+    margin-top: 30px;
+   box-shadow: 0 0px 5px rgb(0 1 1 / 90%);
+   border-radius: 5px;
+
+}
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons{
+   margin-left: 10px;
+   display: flex;
+   width: auto;
+   height:50px;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   top: 15px;
+   bottom: 10px;
+
+   
+}
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons .c-room-ic{ 
+   color:#216fdb;
+   padding:10px 15px;
+   border: 2px solid #e7f3ff;
+   border-radius: 50px;
+   font-weight: 700;
+   font-size: 15px;
+   font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+   position: relative;
+   top:0%;
+   left:0%;
+   bottom:0%;
+   right:0%;
+}
+
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons .c-room-ic i{
+    padding:0px 5px;
+    color:rgb(252, 11, 220);
+}
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons .c-room-ic:hover{
+    background-color:rgba(233, 223, 223, 0.294);
+
+}
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons a{
+}
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons .c-room-img{
+   padding:0px 5px;
+
+}
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons .c-room-img img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+}
+
+.body-section .all-body .post-section .story  .write-post .create-room .room-icons .more-user-croom{
+   background-color: rgba(255, 255, 255, 0.918); 
+    border-radius: 50%;
+    position: absolute;
+    margin-left: 80%;
+    padding:10px;
+    border:1px solid black;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start{
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 3%;
+    height:auto;
+    box-shadow: 0 0px 5px rgb(0 1 1 / 90%);
+    border-radius: 5px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name{
+    display: flex;
+    margin-left: 15px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name a{
+    position: relative;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name a img{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:1px solid #fff;
+    margin-top: 10px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name .namess{
+    margin-left: 5px;
+    margin-top: 10px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name .namess p{
+    font-size: 15px;
+    font-weight: 600;
+    color:#050505;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name .namess p:hover{
+    text-decoration: underline;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .user-post-name .threedots{
+    position: relative;
+    margin-left: 54%;
+    margin-top: 20px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .description{
+    margin-left: 15px;
+    margin-top: 5px;
+    
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .description p{
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .post-items{
+    width: 100%;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .post-items a img{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    background-size: cover;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div{
+    width: 100%;
+    height:270px;
+    /* background-color:red; */
+    
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt{
+    padding: 5px ;
+    margin-left: 5px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .fa-thumbs-up{
+    color:#1877F2;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .fa-meh-rolling-eyes{
+    color:#F5C33B;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .fa-heart{
+    color:#FA383E;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .tlikes{
+    color:#65676b;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .tlikes:hover{
+    text-decoration: underline;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .hor{
+    position: relative;
+    top:10px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comments-check{
+   position: absolute;
+   left:55%;
+   color:#65676b;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .share-check{
+   position: absolute;
+   left:75%;
+   color:#65676b;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comments-check:hover{
+    text-decoration: underline;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .share-check:hover{
+    text-decoration: underline;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .likecs{
+    position: relative;
+    top:20px;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .likecs a{
+    padding:5px 35px;
+    position: relative;
+    margin-left: 2px;
+    text-align: center;
+    color:#65676b;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .likecs a i{
+    padding:5px;
+    border:black;
+    color:rgb(51, 31, 31);
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .likecs a:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 2px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .hors{
+    position: relative;
+    top:30px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option{
+    width:100%;
+    height:auto;
+    position: relative;
+    top:40px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option p{
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    color:#65676B;
+    font-weight: 700;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt{
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt{
+    width: 100%;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt .border-bg{
+    width: 100%;
+    margin-right: 5px;
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 50px;
+    margin-left: 8px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt .border-bg input{
+    width: 60%;
+    align-items: center;
+    outline: none;
+    border:none;
+    min-height:30px;
+    max-height:auto;
+    font-size: 15px;
+    background: transparent;
+    padding:0px 10px;
+    overflow:scroll;
+    word-wrap: break-word;
+    white-space: initial;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt img{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    border:1px solid rgb(110, 100, 100);
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt .border-bg a i{
+    padding:2px 3px;
+    color:#65676b;
+}
+
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .write-cmt .border-bg a i:hover{
+    background-color:rgba(172, 167, 167, 0.609);
+    border-radius: 5px;
+
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment{
+    margin-top: 10px;
+    display: flex;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment img{
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment .cmt-txt{
+    background-color: rgba(109, 109, 119, 0.089);
+    margin-left: 5px;
+    padding:10px 15px;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment .cmt-txt .comment-txt{
+    color:#050505;
+    font-size: 15px;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment .cmt-txt a p{
+    float: left;
+    white-space: pre;
+    color:#050505;
+    font-weight: 600;
+    font-size: 13px;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment .cmt-txt a p:hover{
+  text-decoration: underline;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .post-user-comment .cmt-dots i{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left:20px;
+  top:30%;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .comment-fun{
+    font-size: 12px;
+    margin-left: 60px;
+    margin-top: 2px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .comment-fun a{
+    padding:0px 2px;
+    color:#65676B;
+    font-weight: 600;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .comment-fun a:hover{
+    text-decoration: underline;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .view-more-cmt{
+    color:black;
+    margin-top: 10px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .view-more-cmt a{
+    color:#65676b;
+    font-size: 15px;
+}
+.body-section .all-body .post-section .story  .write-post .user-post-start .like-comment-div .all-likes-cmt .comment-option .view-more-cmt:hover{
+    text-decoration: underline;
+}
+
+/* right bar section */
+.body-section .all-body .right-bar{
+    width: 20%;
+    height: calc(110vh - 50px);
+    position: sticky;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0; 
+    overflow-y:scroll !important;
+    overflow-x: hidden; 
+    
+}
+.body-section .all-body .right-bar:hover{
+   
+}
+.body-section .all-body .right-bar::-webkit-scrollbar{
+    width:6px;
+}
+.body-section .all-body .right-bar::-webkit-scrollbar-track{
+    border-radius: 10px;
+}
+.body-section .all-body .right-bar::-webkit-scrollbar-thumb{
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 10px;
+}
+
+.body-section .all-body .right-bar .rightChild{
+    width: 96%;
+    height: auto;
+    position: relative;
+    top:11%;
+    left:2%;
+    right:2%;  
+}
+.body-section .all-body .right-bar .birthday-show{
+    width:95%;
+    height:auto;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgb(0 1 1 / 90%);
+}
+.body-section .all-body .right-bar .rightChild .birthday-show .hed{
+    text-align: center;
+    font-size: 18px;
+    padding:10px 15px;    
+}
+.body-section .all-body .right-bar .rightChild .birthday-show .pg{
+    text-align: center;
+    font-size: 15px;
+    padding:5px 15px;
+
+}
+.body-section .all-body .right-bar .rightChild .sponsored{
+    width:100%;
+    height:auto;
+    position: relative;
+}
+.body-section .all-body .right-bar .rightChild .sponsored{
+    width:100%;
+    height:auto;
+    position: relative;
+    margin-top: 10px;
+}
+.body-section .all-body .right-bar .rightChild .sponsored h3{
+    opacity:0.6;
+    font-weight: 600;
+}
+.body-section .all-body .right-bar .rightChild .sponsored .postitem{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.body-section .all-body .right-bar .rightChild .sponsored .postitem .post-one{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    padding: 10px 5px;
+}
+.body-section .all-body .right-bar .rightChild .sponsored .postitem .post-one:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 10px;
+
+}
+.body-section .all-body .right-bar .rightChild .sponsored .postitem .post-one img{
+    width:70px;
+    height:70px;
+    border-radius: 10px;
+}
+.body-section .all-body .right-bar .rightChild .sponsored .postitem .post-one a{
+    width:80%;
+    margin-left: 10px;
+    color:#000000;
+}
+.body-section .all-body .right-bar .rightChild .yourPage{
+    width:100%;
+    height:auto;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage{
+    display: flex;
+    width: 100%;
+    height: 30px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage h3{
+    width: 80%;
+    opacity: 0.6;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage a{
+    width: 20%;
+    align-items: center;
+    font-size: 12px;
+    color:#000000;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage a i{
+    width: 20%;
+    padding:8px 10px;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage a i:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name{
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pgI-andN{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    padding:5px 0px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pgI-andN:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pgI-andN img{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pgI-andN a{
+    padding-left:5px;
+    color:#000000;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif{
+    display: grid;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi1{
+    width: 90%;
+    margin-top:5px;
+    padding:10px;
+    border-radius: 10px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi1:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+
+}
+
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi2{
+    width: 90%;
+    padding:10px;
+    margin-top: 1px;
+    border-radius: 10px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi2:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi1 .noti1{
+    padding:5px 8px;
+    color:black;
+    opacity:0.6;
+    font-weight: 600;
+    font-size: 14px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi1 .noti1 i{
+    padding:0px 8px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi2 .promot1{
+    padding:5px 8px;
+    color:black;
+    opacity:0.6;
+    font-weight: 600;
+    font-size: 14px;
+}
+.body-section .all-body .right-bar .rightChild .yourPage .Ypage-name .pg-notif .notifi2 .promot1 i{
+    padding:0px 8px;
+}
+.body-section .all-body .right-bar .rightChild .hor1{
+    margin-bottom: 10px;
+}
+.body-section .all-body .right-bar .rightChild .hor2{
+    margin-top: 10px;
+}
+.body-section .all-body .right-bar .rightChild .contacts{
+    width: 100%;
+    height:auto;
+    margin-top:10px;
+}
+.body-section .all-body .right-bar .rightChild .contacts .txt-contact{
+    display: flex;
+    height: auto;
+    align-items: center;
+}
+.body-section .all-body .right-bar .rightChild .contacts .txt-contact .headCon h3{
+    width:100%;
+    opacity: 0.6;
+    font-weight: 600;
+}
+.body-section .all-body .right-bar .rightChild .contacts .txt-contact .headCon2{
+    position: relative;
+    left:30%;
+}
+.body-section .all-body .right-bar .rightChild .contacts .txt-contact .headCon2 a{
+
+}
+.body-section .all-body .right-bar .rightChild .contacts .txt-contact .headCon2 a i{
+    padding:5px 5px;
+    color:black;
+}
+.body-section .all-body .right-bar .rightChild .contacts .txt-contact .headCon2 a i:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 50%;
+}
+.body-section .all-body .right-bar .rightChild .contacts .active-user{
+    width: 100%;
+    height:auto;
+    margin-top: 5px;
+    padding-bottom: 10px;
+}
+
+.body-section .all-body .right-bar .rightChild .contacts .active-user .user-list{
+    display: flex;
+    padding:5px 0px;
+    align-items: center;
+}
+.body-section .all-body .right-bar .rightChild .contacts .active-user .user-list:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 5px;
+}
+.body-section .all-body .right-bar .rightChild .contacts .active-user .user-list .activeUIN img{
+    width:30px;
+    height:30px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    position: sticky; 
+    margin-left: 5px;
+}
+/* active user symbol */
+.body-section .all-body .right-bar .rightChild .contacts .active-user .user-list .active-symbol{
+    background-color: #31a24a;
+    width:5px;
+    height:5px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    display: inline-flex;
+    border-bottom-left-radius: 50%;
+    transform: rotate(108deg) translateX(25px);
+}
+.body-section .all-body .right-bar .rightChild .contacts .active-user .user-list .activeUIN .Unames{
+    margin-left: 5px;
+    align-items: center;
+    text-align: center;
+    color:#050505;
+    font-weight: 500;
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+    font-size: .9375rem;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon h3{
+    margin-top: 5px;
+    font-weight: 600;
+    opacity: 0.6;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt{
+    display: flex;
+    margin-top:5px;
+    align-items: center;
+    text-align: center;
+    padding:5px 2px;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt:hover{
+    background-color:rgba(236, 228, 228, 0.609);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg{
+    width:20%;
+    height:fit-content;
+    padding:10px 6px;
+}
+
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg .Gimg1{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(0deg) translateX(0px);
+    margin-top:8px;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg .Gimg2{
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    transform: rotate(0deg) translateX(16px);
+}
+/* group two users */
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg .active-symbol{
+    background-color: #31a24a;
+    width:5px;
+    height:5px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    display: inline-flex;
+    border-bottom-left-radius: 50%;
+    transform: rotate(80deg) translateX(10px);
+
+}
+/* group photos */
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg .active-symbol2{
+    background-color: #31a24a;
+    width:5px;
+    height:5px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    display: inline-flex;
+    border-bottom-left-radius: 50%;
+    transform: rotate(20deg) translateX(-11px);
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg2 {
+    margin-left: 2px;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg2 a{
+    font-size: 15px;
+    color:#000000;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg .Gimg0{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+}
+.body-section .all-body .right-bar .rightChild .rGroupCon .gimgtxt .Gimg a .fa-plus{
+    background:rgba(224, 224, 231, 0.746);
+    padding:8px;
+    border-radius: 50%;
+    color:black;
 }
